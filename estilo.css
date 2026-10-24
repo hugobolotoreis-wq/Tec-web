@@ -1,0 +1,418 @@
+/* ========== Geral ========== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9efe9;
+  color: #1f2a24;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  color: #1b4d30;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2e7d4f;
+}
+
+h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #1b4d30;
+}
+
+/* ========== Logotipo ========== */
+
+#logotipo {
+  background-color: #1b4d30;
+  background-image: linear-gradient(#2e7d4f, #1b4d30);
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 10px;
+  border-bottom: 4px solid #f1c40f;
+}
+
+#logotipo h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#logotipo p {
+  margin: 6px 0 0 0;
+  color: #cfe8d8;
+}
+
+/* ========== Layout principal ========== */
+
+#principal {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+#colunaEsquerda {
+  width: 250px;
+  margin-right: 24px;
+}
+
+#colunaJogo {
+  flex: 1;
+}
+
+/* cada área é um "cartão" branco */
+.area {
+  background-color: #ffffff;
+  border: 1px solid #c9d6cd;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== Formulários e botões ========== */
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #44544a;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  margin-top: 3px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #b5c4ba;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #a5d6b4;
+  border-color: #2e7d4f;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #2e7d4f;
+  border: 1px solid #1b4d30;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#comandos button {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* o botão de iniciar destaca-se dos outros */
+#comandos #botaoIniciar {
+  color: #1f2a24;
+  background-color: #f1c40f;
+  border-color: #c9a20a;
+}
+
+/* desistir fica a vermelho */
+#comandos #botaoDesistir {
+  color: #c0392b;
+  background-color: #ffffff;
+  border-color: #c0392b;
+}
+
+.nota {
+  font-size: 12px;
+  color: #66756b;
+}
+
+/* ========== Identificação ========== */
+
+/* os dois separadores (Entrar / Registar) ficam lado a lado */
+#separadores {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+#separadores .separador {
+  flex: 1;
+  margin-top: 0;
+  color: #2e7d4f;
+  background-color: #ffffff;
+  border: 1px solid #2e7d4f;
+}
+
+#separadorEntrar {
+  border-radius: 4px 0 0 4px;
+}
+
+#separadorRegistar {
+  border-radius: 0 4px 4px 0;
+}
+
+/* o separador escolhido fica verde */
+#separadores .separador.ativo {
+  color: #ffffff;
+  background-color: #2e7d4f;
+}
+
+#formEntrar button,
+#formRegistar button {
+  width: 100%;
+}
+
+/* avisos dos formulários (campos vazios, senhas diferentes) */
+#avisoIdentificacao {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+#comSessao p {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+#botaoSair {
+  width: 100%;
+  margin-top: 0;
+  color: #2e7d4f;
+  background-color: #ffffff;
+  border-color: #2e7d4f;
+}
+
+/* ========== Mensagens ========== */
+
+#mensagens {
+  background-color: #fffbe6;
+  border: 1px solid #f1d36b;
+  border-left: 6px solid #f1c40f;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#mensagens p {
+  margin: 0;
+}
+
+/* ========== Tabuleiro ========== */
+
+#areaTabuleiro {
+  text-align: center;
+}
+
+/* indicador de quem joga */
+#vez {
+  display: inline-block;
+  margin: 0 0 14px 0;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  color: #44544a;
+  background-color: #e3e9e5;
+}
+
+#vez.vezAzul {
+  color: #ffffff;
+  background-color: #2a5db0;
+}
+
+#vez.vezVermelha {
+  color: #ffffff;
+  background-color: #c0392b;
+}
+
+/* o tabuleiro é um quadrado verde; o canvas com as linhas fica
+   por baixo e as peças são postas por cima com position: absolute */
+#tabuleiro {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #2e7d4f;
+  background-image: radial-gradient(circle, #3a9662, #24693f);
+  border: 8px solid #1b4d30;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+#linhas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* o círculo de cada posição (left e top são dados pelo JavaScript).
+   A transição de left e top é o que faz a peça deslizar. */
+.posicao {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #1b1b1b;
+  transition: left 0.3s, top 0.3s, transform 0.15s;
+}
+
+/* posição vazia: não se vê, só se vêem as linhas a cruzar */
+.posicao.vazia {
+  border-color: transparent;
+}
+
+/* peças com brilho, parecidas com as do site */
+.posicao.azul {
+  background-color: #2a5db0;
+  background-image: radial-gradient(circle at 35% 30%, #9cbdf2, #2a5db0 45%, #143066);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+}
+
+.posicao.vermelha {
+  background-color: #c0392b;
+  background-image: radial-gradient(circle at 35% 30%, #f5a197, #c0392b 45%, #6e1c14);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+}
+
+/* peça já saltada numa captura múltipla (sai no fim da jogada) */
+.posicao.capturada {
+  background-image: none;
+  background-color: #8a8a8a;
+  opacity: 0.55;
+}
+
+/* a peça que está a deslizar passa por cima das outras */
+.posicao.aMover {
+  z-index: 10;
+}
+
+/* ========== Destaques do tabuleiro ========== */
+
+.clicavel {
+  cursor: pointer;
+}
+
+/* peças minhas que têm jogada */
+.posicao.temJogada {
+  border: 3px solid #ffffff;
+}
+
+/* peças minhas que podem capturar (brilho amarelo) */
+.posicao.podeCapturar {
+  border: 3px solid #f1c40f;
+  box-shadow: 0 0 12px 4px rgba(241, 196, 15, 0.9);
+}
+
+/* peças do computador que posso soprar */
+.posicao.sopravel {
+  border: 4px dashed #f1c40f;
+}
+
+/* peça selecionada */
+.posicao.selecionada {
+  border: 4px solid #f1c40f;
+  box-shadow: 0 0 14px 6px rgba(241, 196, 15, 0.8);
+}
+
+/* destinos possíveis */
+.posicao.destino {
+  background-color: rgba(247, 226, 122, 0.8);
+  border: 2px dashed #ffffff;
+}
+
+/* ========== Efeitos ao passar o rato ========== */
+
+/* as posições clicáveis crescem um pouco quando o rato passa por cima */
+.posicao.clicavel:hover {
+  transform: scale(1.12);
+}
+
+/* os botões mudam de cor quando o rato passa por cima */
+button {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: #1b4d30;
+}
+
+#comandos #botaoIniciar:hover {
+  background-color: #ffd84d;
+}
+
+#comandos #botaoDesistir:hover {
+  color: #ffffff;
+  background-color: #c0392b;
+}
+
+#separadores .separador:hover,
+#botaoSair:hover {
+  color: #ffffff;
+  background-color: #1b4d30;
+}
+
+/* ========== Painéis sobrepostos ========== */
+
+/* a sombra enorme escurece a página por trás do painel */
+.painel {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-top: 6px solid #2e7d4f;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.55);
+}
+
+.painel li {
+  margin-bottom: 6px;
+}
+
+.escondido {
+  display: none;
+}
+
+/* ========== Tabela de classificações ========== */
+
+#tabelaClassificacoes {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#tabelaClassificacoes th,
+#tabelaClassificacoes td {
+  border: 1px solid #c9d6cd;
+  padding: 8px;
+  text-align: left;
+}
+
+#tabelaClassificacoes th {
+  color: #ffffff;
+  background-color: #2e7d4f;
+}
+
+#tabelaClassificacoes tr:nth-child(even) td {
+  background-color: #f1f6f2;
+}
