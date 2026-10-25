@@ -1,0 +1,33 @@
+#mensagens {
+  background-color: #fffbe6;
+  border: 1px solid #f1d36b;
+  border-left: 6px solid #f1c40f;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+#mensagens p {
+  margin: 0;
+}
+
+#mensagens.destaque {
+  background-color: #ffe9c7;
+  border-color: #e67e22;
+  border-left-color: #e67e22;
+  animation: pulsar 0.6s ease-out;
+}
+
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.7);
+  }
+  40% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 8px rgba(230, 126, 34, 0.35);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(230, 126, 34, 0);
+  }
+}

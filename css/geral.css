@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9efe9;
+  color: #1f2a24;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  color: #1b4d30;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #2e7d4f;
+}
+
+h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #1b4d30;
+}
+
+#logotipo {
+  background-color: #1b4d30;
+  background-image: linear-gradient(#2e7d4f, #1b4d30);
+  color: #ffffff;
+  text-align: center;
+  padding: 18px 10px;
+  border-bottom: 4px solid #f1c40f;
+}
+
+#logotipo h1 {
+  margin: 0;
+  font-size: 44px;
+  letter-spacing: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#logotipo p {
+  margin: 6px 0 0 0;
+  color: #cfe8d8;
+}
+
+#principal {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+#colunaEsquerda {
+  width: 250px;
+  margin-right: 24px;
+}
+
+#colunaJogo {
+  flex: 1;
+}
+
+.area {
+  background-color: #ffffff;
+  border: 1px solid #c9d6cd;
+  border-radius: 8px;
+  padding: 14px;
+  margin-bottom: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #44544a;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  margin-top: 3px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #b5c4ba;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #a5d6b4;
+  border-color: #2e7d4f;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 8px 12px;
+  margin-top: 10px;
+  color: #ffffff;
+  background-color: #2e7d4f;
+  border: 1px solid #1b4d30;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#comandos button {
+  display: block;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+#comandos #botaoIniciar {
+  color: #1f2a24;
+  background-color: #f1c40f;
+  border-color: #c9a20a;
+}
+
+#comandos #botaoDesistir {
+  color: #c0392b;
+  background-color: #ffffff;
+  border-color: #c0392b;
+}
+
+.nota {
+  font-size: 12px;
+  color: #66756b;
+}
+
+button {
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: #1b4d30;
+}
+
+#comandos #botaoIniciar:hover {
+  background-color: #ffd84d;
+}
+
+#comandos #botaoDesistir:hover {
+  color: #ffffff;
+  background-color: #c0392b;
+}
+
+/* a sombra enorme escurece o resto da página */
+.painel {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  width: 600px;
+  max-height: 80%;
+  overflow-y: auto;
+  margin: 0 auto;
+  padding: 24px;
+  background-color: #ffffff;
+  border-top: 6px solid #2e7d4f;
+  border-radius: 8px;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.55);
+}
+
+.painel li {
+  margin-bottom: 6px;
+}
+
+.escondido {
+  display: none;
+}

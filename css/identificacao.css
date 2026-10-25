@@ -1,0 +1,55 @@
+#separadores {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+#separadores .separador {
+  flex: 1;
+  margin-top: 0;
+  color: #2e7d4f;
+  background-color: #ffffff;
+  border: 1px solid #2e7d4f;
+}
+
+#separadorEntrar {
+  border-radius: 4px 0 0 4px;
+}
+
+#separadorRegistar {
+  border-radius: 0 4px 4px 0;
+}
+
+#separadores .separador.ativo {
+  color: #ffffff;
+  background-color: #2e7d4f;
+}
+
+#formEntrar button,
+#formRegistar button {
+  width: 100%;
+}
+
+#avisoIdentificacao {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: #c0392b;
+}
+
+#comSessao p {
+  margin-top: 0;
+  font-size: 15px;
+}
+
+#botaoSair {
+  width: 100%;
+  margin-top: 0;
+  color: #2e7d4f;
+  background-color: #ffffff;
+  border-color: #2e7d4f;
+}
+
+#separadores .separador:hover,
+#botaoSair:hover {
+  color: #ffffff;
+  background-color: #1b4d30;
+}

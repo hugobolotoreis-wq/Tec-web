@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <title>Alquerque</title>
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="css/geral.css">
+  <link rel="stylesheet" href="css/identificacao.css">
+  <link rel="stylesheet" href="css/mensagens.css">
+  <link rel="stylesheet" href="css/tabuleiro.css">
+  <link rel="stylesheet" href="css/classificacoes.css">
 </head>
 <body>
 
-  <!-- ========== Logotipo ========== -->
   <header id="logotipo">
     <h1>ALQUERQUE</h1>
     <p>Tecnologias Web - 1ª entrega</p>
@@ -15,24 +18,17 @@
 
   <main id="principal">
 
-    <!-- ========== Coluna da esquerda ========== -->
     <div id="colunaEsquerda">
 
-      <!-- ========== Identificação ========== -->
-      <!-- Nesta entrega não há autenticação nem registo a sério: os botões só
-           verificam se os campos estão preenchidos e guardam o nome para as
-           classificações. A autenticação e o registo reais ficam para a 2ª entrega. -->
       <section id="identificacao" class="area">
         <h2>Identificação</h2>
 
-        <!-- Antes de entrar: escolher entre entrar (log in) e registar (sign up) -->
         <div id="semSessao">
           <div id="separadores">
             <button type="button" id="separadorEntrar" class="separador ativo">Entrar</button>
             <button type="button" id="separadorRegistar" class="separador">Registar</button>
           </div>
 
-          <!-- Formulário de entrada (log in) -->
           <div id="formEntrar">
             <label for="utilizador">Utilizador</label>
             <input type="text" id="utilizador" autocomplete="username">
@@ -41,7 +37,6 @@
             <button type="button" id="botaoEntrar">Entrar</button>
           </div>
 
-          <!-- Formulário de registo (sign up) -->
           <div id="formRegistar" class="escondido">
             <label for="novoUtilizador">Utilizador</label>
             <input type="text" id="novoUtilizador" autocomplete="username">
@@ -55,14 +50,12 @@
           <p id="avisoIdentificacao"></p>
         </div>
 
-        <!-- Depois de entrar: mostrar o nome e deixar sair -->
         <div id="comSessao" class="escondido">
           <p>Olá, <strong id="nomeSessao"></strong>!</p>
           <button type="button" id="botaoSair">Sair</button>
         </div>
       </section>
 
-      <!-- ========== Configuração ========== -->
       <section id="configuracao" class="area">
         <h2>Configuração</h2>
 
@@ -86,10 +79,8 @@
           <option value="dificil">Difícil</option>
         </select>
 
-        <!-- Tamanho do tabuleiro: não há opção, porque o Alquerque é fixo em 5x5 -->
       </section>
 
-      <!-- ========== Comandos ========== -->
       <section id="comandos" class="area">
         <h2>Comandos</h2>
         <button type="button" id="botaoInstrucoes">Instruções</button>
@@ -101,22 +92,17 @@
 
     </div>
 
-    <!-- ========== Coluna do jogo ========== -->
     <div id="colunaJogo">
 
-      <!-- ========== Mensagens ========== -->
       <div id="mensagens" class="area">
         <p id="textoMensagem">Carrega em "Iniciar jogo" para começar.</p>
       </div>
 
-      <!-- ========== Tabuleiro ========== -->
       <section id="areaTabuleiro" class="area">
         <h2>Tabuleiro</h2>
         <p id="vez">Jogo parado</p>
-        <!-- As linhas são desenhadas no canvas e as peças são criadas
-             pelo JavaScript (jogo.js) dentro de "pecas" -->
         <div id="tabuleiro">
-          <canvas id="linhas" width="400" height="400"></canvas>
+          <div id="linhas"></div>
           <div id="pecas"></div>
         </div>
         <p id="contagem">Peças azuis: 12 | Peças vermelhas: 12</p>
@@ -128,7 +114,6 @@
 
   </main>
 
-  <!-- ========== Painel de instruções ========== -->
   <div id="painelInstrucoes" class="painel escondido">
     <h2>Instruções</h2>
 
@@ -177,7 +162,6 @@
     <button type="button" id="fecharInstrucoes">Fechar</button>
   </div>
 
-  <!-- ========== Painel de classificações ========== -->
   <div id="painelClassificacoes" class="painel escondido">
     <h2>Classificações</h2>
     <table id="tabelaClassificacoes">
@@ -187,6 +171,7 @@
           <th>Nível</th>
           <th>Vitórias</th>
           <th>Derrotas</th>
+          <th>Empates</th>
         </tr>
       </thead>
       <tbody id="corpoClassificacoes"></tbody>
@@ -194,6 +179,14 @@
     <button type="button" id="fecharClassificacoes">Fechar</button>
   </div>
 
-  <script src="jogo.js"></script>
+  <script src="js/constantes.js"></script>
+  <script src="js/pecas.js"></script>
+  <script src="js/tabuleiro.js"></script>
+  <script src="js/jogo.js"></script>
+  <script src="js/ia.js"></script>
+  <script src="js/interface.js"></script>
+  <script src="js/classificacoes.js"></script>
+  <script src="js/identificacao.js"></script>
+  <script src="js/comandos.js"></script>
 </body>
 </html>
